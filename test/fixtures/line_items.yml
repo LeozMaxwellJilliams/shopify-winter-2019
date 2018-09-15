@@ -3,7 +3,6 @@
 # Table name: line_items
 #
 #  id         :integer          not null, primary key
-#  price      :decimal(10, 2)
 #  quantity   :integer
 #  product_id :integer
 #  order_id   :integer

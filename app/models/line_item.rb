@@ -3,7 +3,6 @@
 # Table name: line_items
 #
 #  id         :integer          not null, primary key
-#  price      :decimal(10, 2)
 #  quantity   :integer
 #  product_id :integer
 #  order_id   :integer
@@ -12,4 +11,11 @@
 #
 
 class LineItem < ApplicationRecord
+  belongs_to :product
+  belongs_to :order
+
+  validates :order, presence: true
+  validates :product, presence: true
+
+  delegate :price, to: :product
 end
