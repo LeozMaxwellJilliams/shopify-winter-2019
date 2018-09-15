@@ -13,6 +13,6 @@ class Order < ApplicationRecord
   has_many :line_items, inverse_of: :order
 
   def price
-    line_items.pluck(:price).inject(0, &:+)
+    line_items.sum(&:price)
   end
 end
