@@ -16,6 +16,9 @@ class LineItem < ApplicationRecord
 
   validates :order, presence: true
   validates :product, presence: true
+  validates :quantity, presence: true
 
-  delegate :price, to: :product
+  def price
+    product.price * quantity
+  end
 end

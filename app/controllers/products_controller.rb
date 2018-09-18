@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-  protect_from_forgery with: :null_session
-
   def index
     render json: Product.all, status: :ok
   end
