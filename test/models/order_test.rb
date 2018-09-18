@@ -2,10 +2,11 @@
 #
 # Table name: orders
 #
-#  id         :integer          not null, primary key
-#  shop_id    :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  shop_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  customer_id :integer
 #
 
 require 'test_helper'

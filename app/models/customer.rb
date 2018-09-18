@@ -1,22 +1,16 @@
 # == Schema Information
 #
-# Table name: shops
+# Table name: customers
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  email      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class ShopSerializer < ActiveModel::Serializer
-  attributes :id, :name, :revenue
-
-  has_many :products
+class Customer < ApplicationRecord
   has_many :orders
 
-  private
-
-  def revenue
-    object.revenue
-  end
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
