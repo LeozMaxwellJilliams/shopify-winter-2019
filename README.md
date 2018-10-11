@@ -81,7 +81,7 @@ be properly linked to its Shop)
 
 Update a specific Shop (the one with id 1):
 
-`$ curl -X PUT -H "Content-Type: application/json" -d '{"name":"new store title"}' http://35.232.253.129:80/shops/1`
+`$ curl -X PATCH -H "Content-Type: application/json" -d '{"name":"new store title"}' http://35.232.253.129:80/shops/1`
 
 Delete a specific Shop (the one with id 1):
 
